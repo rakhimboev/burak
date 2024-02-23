@@ -1,3 +1,9 @@
+// cluster => database => collection => document
+
+
+
+
+// G task
 const highest = (arr: number[]) => {
   let max: number = 0;
 
