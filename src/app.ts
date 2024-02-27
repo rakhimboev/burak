@@ -1,5 +1,6 @@
 import express from "express";
 import path from "path";
+import router from "./router";
 
 /* 1 - entrance */
 const app = express();
@@ -20,5 +21,6 @@ app.set('view engine', 'ejs')
 
 
 /* 4 - routes */
+app.use('/', router)
 
 export default app
