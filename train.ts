@@ -1,19 +1,29 @@
 // cluster => database => collection => document
 
+/*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+// const highest = (arr: number[]) => {
+//   let max: number = 0;
 
+//   for (let i: number = 1; i < arr.length; i++) {
+//     if (arr[i] > arr[max]) {
+//       max = i;
+//     }
+//   }
+//   console.log(max);
+// };
 
-// G task
-const highest = (arr: number[]) => {
-  let max: number = 0;
+// highest([5, 21, 12, 21, 8]);
+// highest([5, 5, 5, 7]);
 
-  for (let i: number = 1; i < arr.length; i++) {
-    if (arr[i] > arr[max]) {
-      max = i;
-    }
-  }
-  console.log(max);
+/*~~~~~~~~~~~~~~~~~~~~~~~H-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+const getPositive = (arr: number[]) => {
+  const positiveNumbers: number[] = arr.filter((num) => num > 0);
+  const positiveString: string = positiveNumbers.join("");
+
+  console.log(positiveString);
 };
 
-highest([5, 21, 12, 21, 8]);
-highest([5, 5, 5, 7]);
+getPositive([1, -4, 2]);
+getPositive([7, -1, 8, 9, -8]);
