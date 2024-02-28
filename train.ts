@@ -1,4 +1,19 @@
-// cluster => database => collection => document
+// cluster => database => collection => document => dataset
+
+/*
+  Project standards:
+  -Logging standards
+  -Naming standards:
+    functions, methods, variables => camelCase
+    classes => PascalCase
+    folders => kebab-case
+    css => snake_case
+  -Error handlings
+
+*/ 
+
+
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
