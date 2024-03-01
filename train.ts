@@ -1,4 +1,5 @@
 // cluster => database => collection => document => dataset
+// res.send | json | redirect | end | render
 
 /*
   Project standards:
@@ -6,7 +7,7 @@
   -Naming standards:
     functions, methods, variables => camelCase
     classes => PascalCase
-    folders => kebab-case
+    folders, files => kebab-case
     css => snake_case
   -Error handlings
 

@@ -20,10 +20,29 @@ restaurantController.getLogin = (req: Request, res: Response) => {
     console.log("Error: getLogin: ", err);
   }
 };
+
+restaurantController.processLogin = (req: Request, res: Response) => {
+  try {
+    console.log("processLogin page");
+    res.send("processLogin done");
+  } catch (err) {
+    console.log("Error: getLogin: ", err);
+  }
+};
+
 restaurantController.getSignup = (req: Request, res: Response) => {
   try {
     console.log("getSignup page");
     res.send("getSignup page");
+  } catch (err) {
+    console.log("Error: getSignup: ", err);
+  }
+};
+
+restaurantController.processSignup = (req: Request, res: Response) => {
+  try {
+    console.log("processSignup page");
+    res.send("processSignup done");
   } catch (err) {
     console.log("Error: getSignup: ", err);
   }
