@@ -13,6 +13,13 @@
 
 */ 
 
+/*
+  API types:
+  -Traditional api
+  -Rest API
+  GraphQL API
+*/
+
 
 
 
