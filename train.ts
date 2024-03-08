@@ -11,7 +11,7 @@
     css => snake_case
   -Error handlings
 
-*/ 
+*/
 
 /*
   API types:
@@ -24,9 +24,6 @@
 Traditional frontend  => BSSR => EJS
 Modern frontend => SPA => ReactJS
 */
-
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -46,12 +43,51 @@ Modern frontend => SPA => ReactJS
 
 /*~~~~~~~~~~~~~~~~~~~~~~~H-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-const getPositive = (arr: number[]) => {
-  const positiveNumbers: number[] = arr.filter((num) => num > 0);
-  const positiveString: string = positiveNumbers.join("");
+// const getPositive = (arr: number[]) => {
+//   const positiveNumbers: number[] = arr.filter((num) => num > 0);
+//   const positiveString: string = positiveNumbers.join("");
 
-  console.log(positiveString);
-};
+//   console.log(positiveString);
+// };
 
-getPositive([1, -4, 2]);
-getPositive([7, -1, 8, 9, -8]);
+// getPositive([1, -4, 2]);
+// getPositive([7, -1, 8, 9, -8]);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~I-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+// function getDigits(input: string): string {
+//   let str: string = "";
+
+//   for (let char of input) {
+//     if (/[0-9]/.test(char)) {
+//       str += char;
+//     }
+//   }
+//   return str;
+// }
+
+// let result: string = getDigits("m14i1t");
+// console.log(result);
+
+// result = getDigits("7u8z9b");
+// console.log(result);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~J-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function findLongestWord(input: string): string {
+  let words: string[] = input.split(" ");
+  let long: string = "";
+
+  for (let word of words) {
+    if (word.length > long.length) {
+      long = word;
+    }
+  }
+  return long;
+}
+
+let result: string = findLongestWord("I come from Uzbekistan");
+console.log(result);
+
+result = findLongestWord("I come from future");
+console.log(result);

@@ -21,7 +21,7 @@ class MemberService {
       result.memberPassword = "";
       return result.toJSON();
     } catch (err) {
-      console.error('Error model, signup: ', err)
+      console.error("Error model, signup: ", err);
       throw new Errors(HttpCode.BAD_REQUEST, Message.USED_NICK_PHONE);
     }
   }
@@ -29,7 +29,7 @@ class MemberService {
     // TODO: consider member status later
     const member = await this.memberModel
       .findOne(
-        { memberNik: input.memberNick },
+        { memberNick: input.memberNick },
         { memberNick: 1, memberPassword: 1 }
       )
       .exec();
@@ -71,7 +71,7 @@ class MemberService {
   public async processLogin(input: LoginInput): Promise<Member> {
     const member = await this.memberModel
       .findOne(
-        { memberNik: input.memberNick },
+        { memberNick: input.memberNick },
         { memberNick: 1, memberPassword: 1 }
       )
       .exec();
