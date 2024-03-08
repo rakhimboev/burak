@@ -20,6 +20,11 @@
   GraphQL API
 */
 
+/*
+Traditional frontend  => BSSR => EJS
+Modern frontend => SPA => ReactJS
+*/
+
 
 
 
