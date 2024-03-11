@@ -25,6 +25,16 @@ Traditional frontend  => BSSR => EJS
 Modern frontend => SPA => ReactJS
 */
 
+
+/*
+cookie ability:
+  join in request
+  self destroy
+*/
+
+
+
+
 /*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 // const highest = (arr: number[]) => {
