@@ -84,20 +84,40 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~J-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function findLongestWord(input: string): string {
-  let words: string[] = input.split(" ");
-  let long: string = "";
+// function findLongestWord(input: string): string {
+//   let words: string[] = input.split(" ");
+//   let long: string = "";
 
-  for (let word of words) {
-    if (word.length > long.length) {
-      long = word;
-    }
+//   for (let word of words) {
+//     if (word.length > long.length) {
+//       long = word;
+//     }
+//   }
+//   return long;
+// }
+
+// let result: string = findLongestWord("I come from Uzbekistan");
+// console.log(result);
+
+// result = findLongestWord("I come from future");
+// console.log(result);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~K-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+function countVowels(input: string): number {
+  let count: number = 0;
+
+  for (let a of input.toLowerCase()) {
+      if ('aeiou'.includes(a)) {
+          count++;
+      }
   }
-  return long;
+  return count;
 }
 
-let result: string = findLongestWord("I come from Uzbekistan");
-console.log(result);
+let result: number = countVowels("string");
+console.log(result); 
 
-result = findLongestWord("I come from future");
-console.log(result);
+result = countVowels("taqsir");
+console.log(result); 
