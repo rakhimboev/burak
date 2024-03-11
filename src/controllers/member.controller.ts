@@ -4,8 +4,8 @@ import { LoginInput, Member, MemberInput } from "../libs/types/member";
 import MemberService from "../models/Member.service";
 import Errors from "../libs/Error";
 
-const memberController: T = {};
 const memberService = new MemberService();
+const memberController: T = {};
 
 memberController.signup = async (req: Request, res: Response) => {
   try {
@@ -32,7 +32,7 @@ memberController.login = async (req: Request, res: Response) => {
 
     res.json({ member: result });
   } catch (err) {
-    console.log("Error: getLogin: ", err);
+    console.log("Error Login: ", err);
     if (err instanceof Errors) res.status(err.code).json(err);
     else res.status(Errors.standard.code).json(Errors.standard);
   }
