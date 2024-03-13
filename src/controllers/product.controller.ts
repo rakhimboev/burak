@@ -1,6 +1,7 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import Errors from "../libs/Error";
+import { AdminRequest } from "../libs/types/member";
 
 const productController: T = {};
 
