@@ -81,7 +81,7 @@ restaurantController.processLogin = async (
     const message =
       err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
     res.send(
-      `<script> alert('Hi, ${message}'); window.location.replace('admin/login');</script>`
+      `<script> alert('${message}'); window.location.replace('admin/login');</script>`
     );
   }
 };
@@ -115,7 +115,7 @@ restaurantController.checkAuthSession = async (
   }
 };
 
-restaurantController.verifyRestaurant = async (
+restaurantController.verifyRestaurant = (
   req: AdminRequest,
   res: Response,
   next: NextFunction

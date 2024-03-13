@@ -1,7 +1,9 @@
 import { Request, Response } from "express";
 import { T } from "../libs/types/common";
 import Errors from "../libs/Error";
-import { AdminRequest } from "../libs/types/member";
+import ProductService from "../models/Product.service";
+
+const productService = ProductService;
 
 const productController: T = {};
 
@@ -19,7 +21,7 @@ productController.getAllProducts = async (req: Request, res: Response) => {
 productController.createNewProduct = async (req: Request, res: Response) => {
   try {
     console.log("createNewProduct");
-    res.render("products");
+    res.send("done");
   } catch (err) {
     console.log("Error createNewProduct: ", err);
     if (err instanceof Errors) res.status(err.code).json(err);
@@ -30,7 +32,6 @@ productController.createNewProduct = async (req: Request, res: Response) => {
 productController.updateChosenProduct = async (req: Request, res: Response) => {
   try {
     console.log("updateChosenProduct");
-    res.render("products");
   } catch (err) {
     console.log("Error updateChosenProduct: ", err);
     if (err instanceof Errors) res.status(err.code).json(err);
