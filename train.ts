@@ -34,6 +34,14 @@ cookie ability:
 
 
 
+/*  Validatons:
+  -Front end validation
+  -Backend validation
+  -Database validation
+
+*/
+
+
 
 /*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
