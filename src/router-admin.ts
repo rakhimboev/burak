@@ -1,5 +1,6 @@
 import express, { Request, Response } from "express";
 import restaurantController from "./controllers/restaurant.controller";
+import productController from "./controllers/product.controller";
 const routerAdmin = express.Router();
 
 routerAdmin.get("/", restaurantController.goHome);
@@ -14,4 +15,6 @@ routerAdmin
 
 routerAdmin.get("/logout", restaurantController.logout);
 routerAdmin.get("/check-me", restaurantController.checkAuthSession);
+
+routerAdmin.get("/product/all", productController.getAllProducts);
 export default routerAdmin;
