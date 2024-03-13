@@ -25,14 +25,11 @@ Traditional frontend  => BSSR => EJS
 Modern frontend => SPA => ReactJS
 */
 
-
 /*
 cookie ability:
   join in request
   self destroy
 */
-
-
 
 /*  Validatons:
   -Front end validation
@@ -40,8 +37,6 @@ cookie ability:
   -Database validation
 
 */
-
-
 
 /*~~~~~~~~~~~~~~~~~~~~~~~G-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
@@ -112,20 +107,36 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~K-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+// function countVowels(input: string): number {
+//   let count: number = 0;
 
-function countVowels(input: string): number {
-  let count: number = 0;
+//   for (let a of input.toLowerCase()) {
+//       if ('aeiou'.includes(a)) {
+//           count++;
+//       }
+//   }
+//   return count;
+// }
 
-  for (let a of input.toLowerCase()) {
-      if ('aeiou'.includes(a)) {
-          count++;
-      }
-  }
-  return count;
+// let result: number = countVowels("string");
+// console.log(result);
+
+// result = countVowels("taqsir");
+// console.log(result);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~L-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function reverseSentence(input: string): string {
+  const words: string[] = input.split(" ");
+
+  const reversed: string[] = words.map((word) =>
+    word.split("").reverse().join("")
+  );
+  return reversed.join(" ");
 }
 
-let result: number = countVowels("string");
-console.log(result); 
+let result: string = reverseSentence("we like coding");
+console.log(result);
 
-result = countVowels("taqsir");
-console.log(result); 
+result = reverseSentence("hello world");
+console.log(result);
