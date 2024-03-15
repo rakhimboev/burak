@@ -126,17 +126,36 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~L-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function reverseSentence(input: string): string {
-  const words: string[] = input.split(" ");
+// function reverseSentence(input: string): string {
+//   const words: string[] = input.split(" ");
 
-  const reversed: string[] = words.map((word) =>
-    word.split("").reverse().join("")
-  );
-  return reversed.join(" ");
+//   const reversed: string[] = words.map((word) =>
+//     word.split("").reverse().join("")
+//   );
+//   return reversed.join(" ");
+// }
+
+// let result: string = reverseSentence("we like coding");
+// console.log(result);
+
+// result = reverseSentence("hello world");
+// console.log(result);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~Man-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function getSquareNumbers(
+  numbers: number[]
+): { number: number; square: number }[] {
+  const squares: { number: number; square: number }[] = [];
+
+  for (let num of numbers) {
+    squares.push({ number: num, square: num * num });
+  }
+  return squares;
 }
 
-let result: string = reverseSentence("we like coding");
+let result: { number: number; square: number }[] = getSquareNumbers([7, 8, 9]);
 console.log(result);
 
-result = reverseSentence("hello world");
+result = getSquareNumbers([1, 2, 3]);
 console.log(result);
