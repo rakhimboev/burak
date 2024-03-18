@@ -143,19 +143,29 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~Man-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function getSquareNumbers(
-  numbers: number[]
-): { number: number; square: number }[] {
-  const squares: { number: number; square: number }[] = [];
+// function getSquareNumbers(
+//   numbers: number[]
+// ): { number: number; square: number }[] {
+//   const squares: { number: number; square: number }[] = [];
 
-  for (let num of numbers) {
-    squares.push({ number: num, square: num * num });
-  }
-  return squares;
+//   for (let num of numbers) {
+//     squares.push({ number: num, square: num * num });
+//   }
+//   return squares;
+// }
+
+// let result: { number: number; square: number }[] = getSquareNumbers([7, 8, 9]);
+// console.log(result);
+
+// result = getSquareNumbers([1, 2, 3]);
+// console.log(result);
+
+/*~~~~~~~~~~~~~~~~~~~~~~~N-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+
+function palindromCheck(input: string): boolean {
+  const reverse: string = input.split('').reverse().join('');
+  return input === reverse;
 }
-
-let result: { number: number; square: number }[] = getSquareNumbers([7, 8, 9]);
-console.log(result);
-
-result = getSquareNumbers([1, 2, 3]);
-console.log(result);
+console.log(palindromCheck("dad")); 
+console.log(palindromCheck("son")); 
