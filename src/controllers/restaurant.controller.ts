@@ -3,7 +3,7 @@ import { T } from "../libs/types/common";
 import MemberService from "../models/Member.service";
 import { AdminRequest, LoginInput, MemberInput } from "../libs/types/member";
 import { MemberType } from "../libs/enums/member.enum";
-import Errors, { HttpCode, Message } from "../libs/Error";
+import Errors, { HttpCode, Message } from "../libs/Errors";
 
 const restaurantController: T = {};
 const memberService = new MemberService();
@@ -33,6 +33,7 @@ restaurantController.processSignup = async (
 ) => {
   try {
     console.log("processSignup page");
+    console.log("body: ", req.body);
     const file = req.file;
     if (!file) {
       throw new Errors(HttpCode.BAD_REQUEST, Message.SOMETHING_WENT_WRONG);
@@ -42,7 +43,6 @@ restaurantController.processSignup = async (
     newMember.memberImage = file?.path.replace(/\\/g, "/");
     newMember.memberType = MemberType.RESTAURANT;
     const result = await memberService.processSignup(newMember);
-    //TODO: SESSIONS AUTHENTICATION
 
     req.session.member = result;
     req.session.save(() => {
@@ -53,7 +53,7 @@ restaurantController.processSignup = async (
     const message =
       err instanceof Errors ? err.message : Message.SOMETHING_WENT_WRONG;
     res.send(
-      `<script> alert('Hi, ${message}'); window.location.replace('/admin/signup');</script>`
+      `<script> alert('Hiiiii, ${message}'); window.location.replace('/admin/signup');</script>`
     );
   }
 };

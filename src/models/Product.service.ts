@@ -1,5 +1,5 @@
 import { shapeIntoMongooseObjectId } from "../libs/config";
-import Errors, { HttpCode, Message } from "../libs/Error";
+import Errors, { HttpCode, Message } from "../libs/Errors";
 import {
   Product,
   ProductInput,

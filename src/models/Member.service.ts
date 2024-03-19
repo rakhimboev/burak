@@ -1,6 +1,6 @@
 import { shapeIntoMongooseObjectId } from "../libs/config";
 import { MemberType } from "../libs/enums/member.enum";
-import Errors, { HttpCode, Message } from "../libs/Error";
+import Errors, { HttpCode, Message } from "../libs/Errors";
 import {
   MemberInput,
   Member,
