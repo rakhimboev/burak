@@ -163,9 +163,13 @@ cookie ability:
 /*~~~~~~~~~~~~~~~~~~~~~~~N-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
 
-function palindromCheck(input: string): boolean {
-  const reverse: string = input.split('').reverse().join('');
-  return input === reverse;
-}
-console.log(palindromCheck("dad")); 
-console.log(palindromCheck("son")); 
+// function palindromCheck(input: string): boolean {
+//   const reverse: string = input.split('').reverse().join('');
+//   return input === reverse;
+// }
+// console.log(palindromCheck("dad")); 
+// console.log(palindromCheck("son")); 
+
+
+/*~~~~~~~~~~~~~~~~~~~~~~~O-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
