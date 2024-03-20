@@ -162,14 +162,25 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~N-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-
 // function palindromCheck(input: string): boolean {
 //   const reverse: string = input.split('').reverse().join('');
 //   return input === reverse;
 // }
-// console.log(palindromCheck("dad")); 
-// console.log(palindromCheck("son")); 
-
+// console.log(palindromCheck("dad"));
+// console.log(palindromCheck("son"));
 
 /*~~~~~~~~~~~~~~~~~~~~~~~O-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
+function calculateSumOfNumbers(arr: any[]): number {
+  let sum: number = 0;
+
+  for (let item of arr) {
+    if (typeof item === "number") {
+      sum += item;
+    }
+  }
+
+  return sum;
+}
+
+console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
