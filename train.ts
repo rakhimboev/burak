@@ -171,16 +171,29 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~O-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function calculateSumOfNumbers(arr: any[]): number {
-  let sum: number = 0;
+// function calculateSumOfNumbers(arr: any[]): number {
+//   let sum: number = 0;
 
-  for (let item of arr) {
-    if (typeof item === "number") {
-      sum += item;
-    }
+//   for (let item of arr) {
+//     if (typeof item === "number") {
+//       sum += item;
+//     }
+//   }
+
+//   return sum;
+// }
+
+// console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+
+/*~~~~~~~~~~~~~~~~~~~~~~~P-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function objectToArray(obj: { [key: string]: any }): any[][] {
+  const result: any[][] = [];
+
+  for (let key in obj) {
+      result.push([key, obj[key]]);
   }
-
-  return sum;
+  return result;
 }
 
-console.log(calculateSumOfNumbers([10, "10", { son: 10 }, true, 35]));
+console.log(objectToArray({a: 10, b: 20})); 
