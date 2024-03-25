@@ -187,13 +187,22 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~P-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function objectToArray(obj: { [key: string]: any }): any[][] {
-  const result: any[][] = [];
+// function objectToArray(obj: { [key: string]: any }): any[][] {
+//   const result: any[][] = [];
 
-  for (let key in obj) {
-      result.push([key, obj[key]]);
-  }
-  return result;
+//   for (let key in obj) {
+//       result.push([key, obj[key]]);
+//   }
+//   return result;
+// }
+
+// console.log(objectToArray({a: 10, b: 20})); 
+
+/*~~~~~~~~~~~~~~~~~~~~~~~Q-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+function hasProperty(obj: { [key: string]: any }, str: string): boolean {
+  return obj.hasOwnProperty(str);
 }
 
-console.log(objectToArray({a: 10, b: 20})); 
+console.log(hasProperty({name: "BMW", model: "M3"}, "model"));
+console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
