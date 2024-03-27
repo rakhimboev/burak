@@ -200,9 +200,24 @@ cookie ability:
 
 /*~~~~~~~~~~~~~~~~~~~~~~~Q-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
 
-function hasProperty(obj: { [key: string]: any }, str: string): boolean {
-  return obj.hasOwnProperty(str);
+// function hasProperty(obj: { [key: string]: any }, str: string): boolean {
+//   return obj.hasOwnProperty(str);
+// }
+
+// console.log(hasProperty({name: "BMW", model: "M3"}, "model"));
+// console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
+
+/*~~~~~~~~~~~~~~~~~~~~~~~R-TASK~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~*/
+
+const calculate = (nums: string): number => {
+  const eachNum: string[] = nums.split('+');
+
+  let sum: number = 0;
+  for (let eachN of eachNum) {
+    sum += parseFloat(eachN);
+  }
+  return sum;
 }
 
-console.log(hasProperty({name: "BMW", model: "M3"}, "model"));
-console.log(hasProperty({name: "BMW", model: "M3"}, "year")); 
+console.log(calculate("1+3"));
+console.log(calculate("7+8+9"));
